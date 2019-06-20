@@ -1,0 +1,49 @@
+import sys
+import time
+import random
+import datetime
+import telepot
+import RPi.GPIO as GPIO
+
+def on(pin):
+        GPIO.output(pin,GPIO.HIGH)
+        return
+def off(pin):
+        GPIO.output(pin,GPIO.LOW)
+        return
+        
+# Perintah untuk menggunakan pin board GPIO Raspberry Pi
+GPIO.setmode(GPIO.BOARD)
+
+# Pengaturan GPIO 
+GPIO.setup(15, GPIO.OUT)
+GPIO.setup(16, GPIO.OUT)
+
+def handle(msg):
+    chat_id = msg['chat']['id']
+    command = msg['text']
+
+    print 'Got command: %s' % command
+    
+    # Menyalakan channel relay 1
+    if command == 'nyala1':
+       bot.sendMessage(chat_id, on(15))
+       
+    # Menyalakan channel relay 2
+    elif command == 'nyala2':
+       bot.sendMessage(chat_id, on(16))
+    
+    # Memadamkan channel relay 1
+    elif command =='padam1':
+       bot.sendMessage(chat_id, off(15))
+
+    # Memadamkan channel relay 2
+    elif command =='padam1':
+       bot.sendMessage(chat_id, off(16))
+       
+bot = telepot.Bot('Bot Token')
+bot.message_loop(handle)
+print 'I am listening...'
+
+while 1:
+     time.sleep(10)
