@@ -41,6 +41,7 @@ def handle(msg):
     elif command =='padam2':
        bot.sendMessage(chat_id, off(16))
        
+# Paste kode token Anda di bawah, misal bot = telepot.Bot('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9')
 bot = telepot.Bot('Bot Token')
 bot.message_loop(handle)
 print 'I am listening...'
