@@ -38,7 +38,7 @@ def handle(msg):
        bot.sendMessage(chat_id, off(15))
 
     # Memadamkan channel relay 2
-    elif command =='padam1':
+    elif command =='padam2':
        bot.sendMessage(chat_id, off(16))
        
 bot = telepot.Bot('Bot Token')
