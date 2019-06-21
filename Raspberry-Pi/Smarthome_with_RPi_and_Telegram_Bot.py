@@ -20,6 +20,10 @@ GPIO.setup(37, GPIO.OUT)
 GPIO.setup(38, GPIO.OUT)
 GPIO.setup(40, GPIO.OUT)
 
+GPIO.output(37, 0)
+GPIO.output(38, 0)
+GPIO.output(40, 0)
+
 def handle(msg):
     chat_id = msg['chat']['id']
     command = msg['text']
@@ -52,7 +56,18 @@ def handle(msg):
        
 bot = telepot.Bot('Bot Token') # Ganti 'Bot Token' dengan kode token anda, misal bot = telepot.Bot('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9')
 bot.message_loop(handle)
-print 'I am listening...'
+print '=================================================='
+print 'Selamat datang di demo Smarthome Telegram DigiWare'
+print '=================================================='
+print ' '
+print '     + kirim pesan nyala1 untuk mengaktifkan relay channel 1"
+print '     + kirim pesan nyala2 untuk mengaktifkan relay channel 2"
+print '     + kirim pesan nyala3 untuk mengaktifkan relay channel 3"
+print '     + kirim pesan padam1 untuk menonaktifkan relay channel 1"
+print '     + kirim pesan padam2 untuk menonaktifkan relay channel 2"
+print '     + kirim pesan padam3 untuk menonaktifkan relay channel 3"
+print ' '
+print 'Siap menerima pesan Anda...'
 
 while 1:
      time.sleep(10)
