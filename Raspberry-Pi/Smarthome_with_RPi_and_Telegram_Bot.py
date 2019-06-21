@@ -60,12 +60,12 @@ print '=================================================='
 print 'Selamat datang di demo Smarthome Telegram DigiWare'
 print '=================================================='
 print ' '
-print '     + kirim pesan nyala1 untuk mengaktifkan relay channel 1"
-print '     + kirim pesan nyala2 untuk mengaktifkan relay channel 2"
-print '     + kirim pesan nyala3 untuk mengaktifkan relay channel 3"
-print '     + kirim pesan padam1 untuk menonaktifkan relay channel 1"
-print '     + kirim pesan padam2 untuk menonaktifkan relay channel 2"
-print '     + kirim pesan padam3 untuk menonaktifkan relay channel 3"
+print '     + kirim pesan nyala1 untuk mengaktifkan relay channel 1'
+print '     + kirim pesan nyala2 untuk mengaktifkan relay channel 2'
+print '     + kirim pesan nyala3 untuk mengaktifkan relay channel 3'
+print '     + kirim pesan padam1 untuk menonaktifkan relay channel 1'
+print '     + kirim pesan padam2 untuk menonaktifkan relay channel 2'
+print '     + kirim pesan padam3 untuk menonaktifkan relay channel 3'
 print ' '
 print 'Siap menerima pesan Anda...'
 
