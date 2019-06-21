@@ -27,22 +27,35 @@ def handle(msg):
     
     # Menyalakan channel relay 1
     if command == 'nyala1':
-       bot.sendMessage(chat_id, on(15))
+       bot.sendMessage(chat_id, on(37))
+       print 'CHANNEL 1 AKTIF'
        
     # Menyalakan channel relay 2
     elif command == 'nyala2':
-       bot.sendMessage(chat_id, on(16))
+       bot.sendMessage(chat_id, on(38))
+       print 'CHANNEL 2 AKTIF'
+       
+    # Menyalakan channel relay 3
+    elif command == 'nyala2':
+       bot.sendMessage(chat_id, on(40))
+       print 'CHANNEL 3 AKTIF'
     
     # Memadamkan channel relay 1
     elif command =='padam1':
-       bot.sendMessage(chat_id, off(15))
+       bot.sendMessage(chat_id, off(37))
+       print 'CHANNEL 1 PADAM'
 
     # Memadamkan channel relay 2
     elif command =='padam2':
-       bot.sendMessage(chat_id, off(16))
+       bot.sendMessage(chat_id, off(38))
+       print 'CHANNEL 2 PADAM'
        
-# Paste kode token Anda di bawah, misal bot = telepot.Bot('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9')
-bot = telepot.Bot('Bot Token')
+    # Memadamkan channel relay 3
+    elif command =='padam2':
+       bot.sendMessage(chat_id, off(40))
+        print 'CHANNEL 3 PADAM'
+       
+bot = telepot.Bot('Bot Token') # Ganti 'Bot Token' dengan kode token anda, misal bot = telepot.Bot('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9')
 bot.message_loop(handle)
 print 'I am listening...'
 
