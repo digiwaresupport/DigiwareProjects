@@ -36,7 +36,7 @@ def handle(msg):
        print 'CHANNEL 2 AKTIF'
        
     # Menyalakan channel relay 3
-    elif command == 'nyala2':
+    elif command == 'nyala3':
        bot.sendMessage(chat_id, on(40))
        print 'CHANNEL 3 AKTIF'
     
@@ -51,7 +51,7 @@ def handle(msg):
        print 'CHANNEL 2 PADAM'
        
     # Memadamkan channel relay 3
-    elif command =='padam2':
+    elif command =='padam3':
        bot.sendMessage(chat_id, off(40))
         print 'CHANNEL 3 PADAM'
        
