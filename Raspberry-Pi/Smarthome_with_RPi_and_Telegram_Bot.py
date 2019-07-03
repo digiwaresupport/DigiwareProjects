@@ -56,15 +56,11 @@ def handle(msg):
 
     #Memadamkan semua channel
     elif command =='allof':
-       bot.sendMessage(chat_id, off(40))
-       bot.sendMessage(chat_id, off(38))
-       bot.sendMessage(chat_id, off(37))
+       bot.sendMessage(chat_id, off(40), off(38), off(37))
 
     #Memadamkan semua channel
     elif command =='allon':
-       bot.sendMessage(chat_id, on(40))
-       bot.sendMessage(chat_id, on(38))
-       bot.sendMessage(chat_id, on(37))
+       bot.sendMessage(chat_id, on(40), on(38), on(37))
        
 bot = telepot.Bot('Bot Token') # Ganti 'Bot Token' dengan kode token anda, misal bot = telepot.Bot('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9')
 bot.message_loop(handle)
